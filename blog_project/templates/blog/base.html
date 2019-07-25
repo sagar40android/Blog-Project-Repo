@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>  Sagar's Home Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/blog.css" %}">
+  </head>
+  <body>
+    <h1>{%block title_block%} {%endblock%}</h1>
+    <div class="container">
+      {%block content_body%}
+      {%endblock%}
+    </div>
+
+    <div class="sidebar">
+      <h2>Sagar's Blog</h2>
+      <p >The total  number of published posts upto today: <span id="pcount">{%my_tag%}</span></p>
+      <h3>Latest Posts:</h3>{%show_latest_post 100%}
+      <h3>Most Commented tag:</h3>
+      {%get_most_commented_tag as most_commented%}
+      <ul>
+        {%for post in most_commented %}
+        <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+        {%endfor%}
+      </ul>
+    </div>
+
+  </body>
+</html>

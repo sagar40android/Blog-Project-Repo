@@ -1,0 +1,61 @@
+.container{
+  width: 60%;
+  height: 100%;
+  float: left;
+  padding-left: 30px;
+  background-color: green;
+  color: white;
+}
+
+.sidebar{
+  width: 40%;
+  height: 100%;
+  float: right;
+  margin-top: 0px;
+  background-color: red;
+  color: white;
+  padding-left: 30px;
+}
+
+h1{
+  width: 60%;
+  float: left;
+  padding-left: 30px;
+  background-color: green;
+  color: white;
+}
+
+body{
+    background-color: green;
+}
+
+#date{
+  color: yellow;
+  font-size: 12px;
+  font-style: italic;
+}
+
+a{
+  color: yellow;
+}
+
+input{
+  color: black;
+}
+
+textarea{
+  color: black;
+}
+
+#ch{
+  color: yellow;
+  font-size: 30px;
+  font-style: italic;
+
+}
+
+#pcount{
+  font-size: 40px;
+  color: yellow;
+  font-weight: bold;;
+}
